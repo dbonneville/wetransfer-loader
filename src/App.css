@@ -1,38 +1,156 @@
-.App {
+:root {
+  --blue: #348aff;
+  --white: #fff;
+  --greylt: #e3e6e8;
+  --greymd: #abafb2;
+  --greydk: #131314;
+  --pageBkgd: #f3eae2;
+  --size: 170px;
+  --sizehalf: 85px;
+  --test: #f00;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  display: grid;
+  height: 100%;
   text-align: center;
+  place-items: center;
+  background: var(--pageBkgd);
+  font-family: "Lexend", monospace;
+}
+.container {
+  position: relative;
+  width: 280px;
+  height: 410px;
+  padding: 30px 0 0 0;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgb(0, 0, 0, 0.15);
+  background-color: var(--white);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* spin the donut */
+.circular {
+  height: var(--size);
+  width: var(--size);
+  margin: 0px auto;
+  position: relative;
+  animation: spinAll 2s linear infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
+@keyframes spinAll {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
+}
+/* end */
+
+.circular .inner {
+  position: absolute;
+  z-index: 6;
+  top: 50%;
+  left: 50%;
+  height: 150px;
+  width: 150px;
+  margin: -75px 0 0 -75px;
+  background: var(--white);
+  border-radius: 100%;
+}
+.number {
+  position: absolute;
+  top: 115px;
+  left: 140px;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 100px;
+  color: var(--greydk);
+  font-size: 3.6em;
+  text-align: left;
+}
+.number span {
+}
+.number-pct {
+  position: absolute;
+  font-size: 1em;
+  color: var(--greymd);
+  top: 130px;
+  top: 93px;
+  left: 145px;
+  z-index: 100;
+}
+.circular .bar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  border-radius: 100%;
+  clip: rect(0px, var(--size), var(--size), var(--sizehalf));
+  background-color: var(--greylt);
+}
+.circle .bar .progress {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  clip: rect(0px, var(--sizehalf), var(--size), 0px);
+  background: var(--blue);
+}
+.circle .left .progress {
+  z-index: 1;
+  /* animation: linear; */
+}
+.circle .right {
+  transform: rotate(180deg);
+  z-index: 3;
+}
+
+/* dots */
+.dot {
+  z-index: 1000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50%;
+  height: 10px;
+  margin-top: -5px;
+  transform-origin: 0% 50%;
+  transform: rotate(-90deg);
+}
+
+.dot span {
+  position: absolute;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: var(--blue);
+}
+
+.staticDot {
+  z-index: 100;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50%;
+  height: 10px;
+  margin-top: -5px;
+  transform-origin: 0% 50%;
+  transform: rotate(-90deg);
+}
+
+.staticDot span {
+  position: absolute;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: var(--blue);
 }
