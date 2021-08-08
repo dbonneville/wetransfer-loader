@@ -102,10 +102,10 @@ body {
   border-radius: 100%;
   clip: rect(0px, var(--sizehalf), var(--size), 0px);
   background: var(--blue);
+  transition: transform 80ms;
 }
 .circle .left .progress {
   z-index: 1;
-  /* animation: linear; */
 }
 .circle .right {
   transform: rotate(180deg);
@@ -123,6 +123,7 @@ body {
   margin-top: -5px;
   transform-origin: 0% 50%;
   transform: rotate(-90deg);
+  transition: transform 80ms;
 }
 
 .dot span {

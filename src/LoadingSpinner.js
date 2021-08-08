@@ -25,7 +25,7 @@ export default function LoadingSpinner() {
     if (counter < 100) {
       setCounter(counter + 1);
     }
-  }, 100);
+  }, 80);
 
   const leftRotation = () => {
     if (counter <= 50) {
