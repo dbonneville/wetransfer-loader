@@ -123,6 +123,7 @@ export default function LoadingSpinner() {
                     transform: isPlaying
                       ? `rotate(${rightRotation()}deg)`
                       : `rotate(0deg)`,
+                    display: isPlaying ? `block` : `none`,
                   }}
                 ></div>
               </div>

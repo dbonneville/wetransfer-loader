@@ -1,5 +1,6 @@
 :root {
   --blue: #348aff;
+  --blueMd: #0a5ade;
   --white: #fff;
   --greylt: #e3e6e8;
   --greymd: #abafb2;
@@ -169,6 +170,9 @@ body {
   width: 100px;
   border: 1px solid var(--blue);
   background-color: var(--white);
+  color: var(--blueMd);
+  font-size: 16px;
+  width: 156px;
 }
 .toggleBtn:hover {
   background-color: var(--blue);
@@ -176,7 +180,8 @@ body {
 }
 .btnContainer {
   border-top: 1px solid var(--greymd);
-  margin-top: 20px;
+  margin-top: 31px;
+  padding-top: 16px;
 }
 
 /* loading metadata */
