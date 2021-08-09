@@ -6,12 +6,12 @@ import LoadingInfo from "./LoadingInfo";
 function useInterval(callback, delay) {
   const savedCallback = useRef();
 
-  // remember the latest callback.
+  // remember the latest callback
   useEffect(() => {
     savedCallback.current = callback;
   }, [callback]);
 
-  // set up the interval.
+  // set up the interval
   useEffect(() => {
     let id = setInterval(() => {
       savedCallback.current();
@@ -28,10 +28,7 @@ export default function LoadingSpinner() {
   const handlePlayToggle = () => {
     setCounter(0);
     setIsPlaying((prevPlaying) => !prevPlaying);
-
-    console.log("curr play state is " + isPlaying);
   };
-  /**/
 
   useInterval(() => {
     if (counter < 100 && isPlaying) {
@@ -115,6 +112,7 @@ export default function LoadingSpinner() {
                   className="progress"
                   style={{
                     transform: `rotate(${leftRotation()}deg)`,
+                    display: isPlaying ? `block` : `none`,
                   }}
                 ></div>
               </div>
