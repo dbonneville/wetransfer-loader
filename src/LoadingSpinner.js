@@ -23,18 +23,21 @@ function useInterval(callback, delay) {
 export default function LoadingSpinner() {
   const [counter, setCounter] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [spinning, setSpinning] = useState(false);
 
   /* toggle loading animation */
   const handlePlayToggle = () => {
     setCounter(0);
     setIsPlaying((prevPlaying) => !prevPlaying);
+    console.log("isPlaying : " + isPlaying);
   };
 
   useInterval(() => {
     if (counter < 100 && isPlaying) {
       setCounter(counter + 1);
-    } else if (counter === 100) {
-      setIsPlaying(false);
+      setSpinning(true);
+    } else if (counter == 100) {
+      setSpinning(false);
     }
   }, 80);
 
@@ -77,8 +80,6 @@ export default function LoadingSpinner() {
     }
   };
 
-  console.log("isPlaying: " + isPlaying);
-
   return (
     <>
       <div className="container">
@@ -91,7 +92,7 @@ export default function LoadingSpinner() {
         <div
           className="circular"
           style={{
-            animation: isPlaying ? `spinAll 2s linear both infinite` : ``,
+            animation: spinning ? `spinAll 2s linear both infinite` : ``,
           }}
         >
           <div className="spin-container">
