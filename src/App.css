@@ -40,7 +40,7 @@ body {
   width: var(--size);
   margin: 0px auto;
   position: relative;
-  animation: spinAll 2s linear infinite;
+  /* animation: spinAll 2s linear infinite; */
 }
 
 @keyframes spinAll {
@@ -135,6 +135,10 @@ body {
   background-color: var(--blue);
 }
 
+.hidden {
+  display: none;
+}
+
 .staticDot {
   z-index: 100;
   position: absolute;
@@ -154,4 +158,50 @@ body {
   height: 10px;
   border-radius: 100%;
   background-color: var(--blue);
+}
+
+/* toggle button */
+.toggleBtn,
+.toggleBtn:active {
+  padding: 10px 30px;
+  border-radius: 20px;
+  height: 40px;
+  width: 100px;
+  border: 1px solid var(--blue);
+  background-color: var(--white);
+}
+.toggleBtn:hover {
+  background-color: var(--blue);
+  color: var(--white);
+}
+.btnContainer {
+  border-top: 1px solid var(--greymd);
+  margin-top: 20px;
+}
+
+/* loading metadata */
+.loadingInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+.loadingInfo .transferring {
+  font-size: 22px;
+  color: var(--greydk);
+}
+.loadingInfo .sending {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--blue);
+  border-bottom: 1px solid var(--greylt);
+  width: 85px;
+  padding-bottom: 2px;
+}
+.loadingInfo .loadingProgress {
+  font-size: 13px;
+  margin-top: 2px;
+  line-height: 17px;
+  color: var(--greydk);
 }
