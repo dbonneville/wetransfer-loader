@@ -33,6 +33,8 @@ export default function LoadingSpinner() {
   useInterval(() => {
     if (counter < 100 && isPlaying) {
       setCounter(counter + 1);
+    } else if (counter === 100) {
+      setIsPlaying(false);
     }
   }, 80);
 
@@ -44,7 +46,7 @@ export default function LoadingSpinner() {
   };
 
   const rightRotation = () => {
-    if (counter > 51) {
+    if (counter > 50) {
       let rightDeg = counter * 3.6 - 180;
       return rightDeg;
     }
@@ -74,6 +76,8 @@ export default function LoadingSpinner() {
       return 185;
     }
   };
+
+  console.log("isPlaying: " + isPlaying);
 
   return (
     <>
