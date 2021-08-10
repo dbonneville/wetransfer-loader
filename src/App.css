@@ -35,13 +35,13 @@ body {
   background-color: var(--white);
 }
 
-/* spin the donut */
+/* spin the donut: animation property is added by react dynamically */
 .circular {
   height: var(--size);
   width: var(--size);
   margin: 0px auto;
   position: relative;
-  /* animation: spinAll 2s linear infinite; */
+  animation: none;
 }
 
 @keyframes spinAll {
@@ -52,19 +52,8 @@ body {
     transform: rotate(360deg);
   }
 }
-/* end */
 
-.circular .inner {
-  position: absolute;
-  z-index: 6;
-  top: 50%;
-  left: 50%;
-  height: 150px;
-  width: 150px;
-  margin: -75px 0 0 -75px;
-  background: var(--white);
-  border-radius: 100%;
-}
+/* percentage */
 .number {
   position: absolute;
   top: 115px;
@@ -86,6 +75,19 @@ body {
   left: 145px;
   z-index: 100;
 }
+
+.circular .inner {
+  position: absolute;
+  z-index: 6;
+  top: 50%;
+  left: 50%;
+  height: 150px;
+  width: 150px;
+  margin: -75px 0 0 -75px;
+  background: var(--white);
+  border-radius: 100%;
+}
+
 .circular .bar {
   position: absolute;
   height: 100%;
@@ -133,10 +135,6 @@ body {
   height: 10px;
   border-radius: 100%;
   background-color: var(--blue);
-}
-
-.hidden {
-  display: none;
 }
 
 .staticDot {

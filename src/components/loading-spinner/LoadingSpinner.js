@@ -8,7 +8,6 @@ export default function LoadingSpinner({
 }) {
   //
   const leftRotation = () => {
-    // let leftDeg = 0;
     if (percentage <= 50) {
       let leftDeg = percentage * 3.6;
       return leftDeg;
