@@ -39,7 +39,7 @@ export default function Counter() {
     } else if (counter === 100) {
       setSpinning(false);
     }
-  }, 80);
+  }, 40);
 
   return (
     <>
@@ -52,7 +52,7 @@ export default function Counter() {
         <LoadingInfo />
         <div className="btnContainer">
           <button className="toggleBtn" onClick={handlePlayToggle}>
-            {spinning ? `End` : `Start`}
+            {isPlaying ? `End / Reset` : `Start`}
           </button>
         </div>
       </div>

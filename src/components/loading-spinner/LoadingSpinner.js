@@ -6,8 +6,6 @@ export default function LoadingSpinner({
   isPlaying,
   spinning,
 }) {
-  console.log({ spinning, percentage });
-
   //
   const leftRotation = () => {
     // let leftDeg = 0;
