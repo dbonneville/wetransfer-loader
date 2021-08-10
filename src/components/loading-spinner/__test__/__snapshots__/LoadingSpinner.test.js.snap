@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 55% in the spinner 1`] = `
+Array [
+  <div
+    className="number"
+    data-testid="number"
+    style={
+      Object {
+        "left": "155px",
+      }
+    }
+  >
+    55
+  </div>,
+  <div
+    className="number-pct"
+    style={
+      Object {
+        "left": "173px",
+      }
+    }
+  >
+    %
+  </div>,
+  <div
+    className="circular"
+    style={
+      Object {
+        "animation": "",
+      }
+    }
+  >
+    <div
+      className="spin-container"
+    >
+      <div
+        className="inner"
+      />
+      <div
+        className="circle"
+      >
+        <div
+          className="dot"
+          style={
+            Object {
+              "display": "none",
+              "transform": "rotate(108deg)",
+            }
+          }
+        >
+          <span />
+        </div>
+        <div
+          className="bar left"
+        >
+          <div
+            className="progress"
+            style={
+              Object {
+                "display": "none",
+                "transform": "rotate(0deg)",
+              }
+            }
+          />
+        </div>
+        <div
+          className="bar right"
+          id="barRight"
+        >
+          <div
+            className="progress"
+            style={
+              Object {
+                "display": "none",
+                "transform": "rotate(0deg)",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;

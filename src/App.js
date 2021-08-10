@@ -1,8 +1,8 @@
 import React from "react";
-import LoadingSpinner from "./LoadingSpinner";
+import Counter from "./components/counter/Counter";
 import "./App.css";
 
 function App() {
-  return <LoadingSpinner />;
+  return <Counter />;
 }
 export default App;

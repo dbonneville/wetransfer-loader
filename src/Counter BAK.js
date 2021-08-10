@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
-import "./LoadingInfo";
 import LoadingInfo from "./LoadingInfo";
 
 function useInterval(callback, delay) {
@@ -29,14 +28,13 @@ export default function LoadingSpinner() {
   const handlePlayToggle = () => {
     setCounter(0);
     setIsPlaying((prevPlaying) => !prevPlaying);
-    console.log("isPlaying : " + isPlaying);
   };
 
   useInterval(() => {
     if (counter < 100 && isPlaying) {
       setCounter(counter + 1);
       setSpinning(true);
-    } else if (counter == 100) {
+    } else if (counter === 100) {
       setSpinning(false);
     }
   }, 80);
@@ -135,6 +133,7 @@ export default function LoadingSpinner() {
             </div>
           </div>
         </div>
+
         <LoadingInfo />
         <div className="btnContainer">
           <button className="toggleBtn" onClick={handlePlayToggle}>

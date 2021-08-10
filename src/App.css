@@ -23,7 +23,7 @@ body {
   text-align: center;
   place-items: center;
   background: var(--pageBkgd);
-  font-family: "Lexend", monospace;
+  font-family: "Lexend", Arial;
 }
 .container {
   position: relative;
