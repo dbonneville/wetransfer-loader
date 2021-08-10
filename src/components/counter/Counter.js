@@ -39,7 +39,7 @@ export default function Counter() {
     } else if (counter === 100) {
       setSpinning(false);
     }
-  }, 40);
+  }, 80);
 
   return (
     <>
